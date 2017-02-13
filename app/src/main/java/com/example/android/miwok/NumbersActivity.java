@@ -27,14 +27,12 @@ public class NumbersActivity extends AppCompatActivity {
         englishNumbers.add("Nine");
         englishNumbers.add("Ten");
 
-        int index = 0;
         LinearLayout numbersRootView = (LinearLayout) findViewById(R.id.numbers_root_view);
 
-        while (index < englishNumbers.size()) {
+        for (int index = 0; index < englishNumbers.size(); index ++) {
             TextView wordView = new TextView(this);
             numbersRootView.addView(wordView);
             wordView.setText(englishNumbers.get(index));
-            index ++;
         }
     }
 
