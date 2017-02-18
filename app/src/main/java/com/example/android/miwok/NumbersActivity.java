@@ -2,8 +2,7 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -12,28 +11,29 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
-        // Declare the array of English numbers
-        ArrayList<String> englishNumbers = new ArrayList<>();
-        englishNumbers.add("One");
-        englishNumbers.add("Two");
-        englishNumbers.add("Three");
-        englishNumbers.add("Four");
-        englishNumbers.add("Five");
-        englishNumbers.add("Six");
-        englishNumbers.add("Seven");
-        englishNumbers.add("Eight");
-        englishNumbers.add("Nine");
-        englishNumbers.add("Ten");
+        // Create an ArrayList that accepts <Word> object types
+        ArrayList<Word> words = new ArrayList<>();
 
-        LinearLayout numbersRootView = (LinearLayout) findViewById(R.id.numbers_root_view);
+        //Add <Word> object types to the ArrayList
+        words.add(new Word("lutti", "one"));
+        words.add(new Word("otiiko", "two"));
+        words.add(new Word("tolookosu", "three"));
+        words.add(new Word("oyyisa", "four"));
+        words.add(new Word("massokka", "five"));
+        words.add(new Word("temmokka", "six"));
+        words.add(new Word("tenekaku", "seven"));
+        words.add(new Word("kawinta", "eight"));
+        words.add(new Word("wo'e", "nine"));
+        words.add(new Word("na'aacha", "ten"));
 
-        for (int index = 0; index < englishNumbers.size(); index ++) {
-            TextView wordView = new TextView(this);
-            numbersRootView.addView(wordView);
-            wordView.setText(englishNumbers.get(index));
-        }
+        //Instantiate a new WordAdapter for the words ArrayList
+        WordAdapter adapter = new WordAdapter(this, words);
+        //Declare the ListView to be used for placing the words objects in
+        ListView listView = (ListView) findViewById(R.id.list);
+        //Set the aforementioned WordAdapter adapter on the ListView
+        listView.setAdapter(adapter);
     }
 
 }

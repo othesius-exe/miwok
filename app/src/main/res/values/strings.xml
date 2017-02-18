@@ -27,4 +27,9 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+
+    <!-- Test Strings -->
+    <string name="lutti">Lutti</string>
+    <string name="one">One</string>
+
 </resources>
