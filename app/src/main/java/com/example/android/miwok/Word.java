@@ -1,9 +1,13 @@
 package com.example.android.miwok;
+
 /**
  * Created by Othesius on 2/16/17.
  */
 
 public class Word {
+
+    // Word related image
+    private int mWordImage;
 
     // Default translation of the word
     private String mDefaultTranslation;
@@ -11,10 +15,15 @@ public class Word {
     // Miwok translation of the word
     private String mMiwokTranslation;
 
-    // Accepts words and converts them from one language to the other
-    public Word(String defaultTranslation, String miwokTranslation){
+    // Sets the words
+    public Word(int wordImage, String defaultTranslation, String miwokTranslation){
+        mWordImage = wordImage;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+    }
+
+    public int getWordImage() {
+        return mWordImage;
     }
 
     // Returns default translation
@@ -23,7 +32,7 @@ public class Word {
     }
 
     // Returns Miwok translation
-    public String getmMiwokTranslation() {
+    public String getMiwokTranslation() {
         return mMiwokTranslation;
     }
 }

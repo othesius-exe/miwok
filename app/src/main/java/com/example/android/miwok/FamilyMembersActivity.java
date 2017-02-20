@@ -15,16 +15,16 @@ public class FamilyMembersActivity extends AppCompatActivity {
 
         ArrayList<Word> familyMembers = new ArrayList<> ();
 
-        familyMembers.add(new Word("father", "epe"));
-        familyMembers.add(new Word("mother", "eta"));
-        familyMembers.add(new Word("son", "angsi"));
-        familyMembers.add(new Word("daughter", "tune"));
-        familyMembers.add(new Word("older brother", "taachi"));
-        familyMembers.add(new Word("younger brother", "chalitti"));
-        familyMembers.add(new Word("older sister", "tete"));
-        familyMembers.add(new Word("younger sister", "kollitti"));
-        familyMembers.add(new Word("grandmother", "ama"));
-        familyMembers.add(new Word("grandfather", "paapa"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "father", "epe"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "mother", "eta"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "son", "angsi"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "daughter", "tune"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "older brother", "taachi"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "younger brother", "chalitti"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher,"older sister", "tete"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher,"younger sister", "kollitti"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "grandmother", "ama"));
+        familyMembers.add(new Word(R.mipmap.ic_launcher, "grandfather", "paapa"));
 
         WordAdapter familyAdapter = new WordAdapter(this, familyMembers);
 
