@@ -17,16 +17,16 @@ public class NumbersActivity extends AppCompatActivity {
         ArrayList<Word> words = new ArrayList<>();
 
         //Add <Word> object types to the ArrayList
-        words.add(new Word(R.mipmap.ic_launcher, "lutti", "one"));
-        words.add(new Word(R.mipmap.ic_launcher, "otiiko", "two"));
-        words.add(new Word(R.mipmap.ic_launcher, "tolookosu", "three"));
-        words.add(new Word(R.mipmap.ic_launcher, "oyyisa", "four"));
-        words.add(new Word(R.mipmap.ic_launcher, "massokka", "five"));
-        words.add(new Word(R.mipmap.ic_launcher, "temmokka", "six"));
-        words.add(new Word(R.mipmap.ic_launcher, "tenekaku", "seven"));
-        words.add(new Word(R.mipmap.ic_launcher, "kawinta", "eight"));
-        words.add(new Word(R.mipmap.ic_launcher, "wo'e", "nine"));
-        words.add(new Word(R.mipmap.ic_launcher, "na'aacha", "ten"));
+        words.add(new Word(R.drawable.number_one, "lutti", "one"));
+        words.add(new Word(R.drawable.number_two, "otiiko", "two"));
+        words.add(new Word(R.drawable.number_three, "tolookosu", "three"));
+        words.add(new Word(R.drawable.number_four, "oyyisa", "four"));
+        words.add(new Word(R.drawable.number_five, "massokka", "five"));
+        words.add(new Word(R.drawable.number_six, "temmokka", "six"));
+        words.add(new Word(R.drawable.number_seven, "tenekaku", "seven"));
+        words.add(new Word(R.drawable.number_eight, "kawinta", "eight"));
+        words.add(new Word(R.drawable.number_nine, "wo'e", "nine"));
+        words.add(new Word(R.drawable.number_ten, "na'aacha", "ten"));
 
         //Instantiate a new WordAdapter for the words ArrayList
         WordAdapter adapter = new WordAdapter(this, words);
@@ -35,5 +35,4 @@ public class NumbersActivity extends AppCompatActivity {
         //Set the aforementioned WordAdapter adapter on the ListView
         listView.setAdapter(adapter);
     }
-
 }

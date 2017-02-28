@@ -20,4 +20,17 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- List item text size -->
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="text_left_padding">16dp</dimen>
+    <dimen name="text_top_padding">16dp</dimen>
+
+    <!-- Image sizes -->
+    <dimen name="image_height">88dp</dimen>
+    <dimen name="image_width">88dp</dimen>
+
+    <!-- Text View height -->
+    <dimen name="top_text_view">44dp</dimen>
+    <dimen name="bottom_text_view">44dp</dimen>
+
+
 </resources>

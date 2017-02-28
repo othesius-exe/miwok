@@ -6,8 +6,8 @@ package com.example.android.miwok;
 
 public class Word {
 
-    // Word related image
-    private int mWordImage;
+    // Variable to store the image related to the word
+    private int mWordImage = NO_IMAGE_PROVIDED;
 
     // Default translation of the word
     private String mDefaultTranslation;
@@ -15,14 +15,28 @@ public class Word {
     // Miwok translation of the word
     private String mMiwokTranslation;
 
-    // Sets the words
+    // Constant value to represent that no image was provided
+    private static final int NO_IMAGE_PROVIDED = -1;
+
+    //
+    public boolean hasImageId() {
+        return mWordImage != NO_IMAGE_PROVIDED;
+    }
+
+    // Constructor with word related image
     public Word(int wordImage, String defaultTranslation, String miwokTranslation){
         mWordImage = wordImage;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
     }
 
-    public int getWordImage() {
+    // Phrases activity constructor
+    public Word(String defaultTranslation, String miwokTranslation) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+    }
+
+    public int getImageResourceId() {
         return mWordImage;
     }
 

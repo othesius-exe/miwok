@@ -15,21 +15,19 @@ public class ColorsActivity extends AppCompatActivity {
 
         ArrayList<Word> colors = new ArrayList<> ();
 
-        colors.add(new Word(R.mipmap.ic_launcher, "wetetti", "red"));
-        colors.add(new Word(R.mipmap.ic_launcher, "chokokki", "green"));
-        colors.add(new Word(R.mipmap.ic_launcher, "takaakki", "brown"));
-        colors.add(new Word(R.mipmap.ic_launcher, "topoppi", "gray"));
-        colors.add(new Word(R.mipmap.ic_launcher, "kululli", "black"));
-        colors.add(new Word(R.mipmap.ic_launcher, "kelelli", "white"));
-        colors.add(new Word(R.mipmap.ic_launcher, "topiise", "dusty yellow"));
-        colors.add(new Word(R.mipmap.ic_launcher, "chiwiite", "mustard yellow"));
+        colors.add(new Word(R.drawable.color_red, "wetetti", "red"));
+        colors.add(new Word(R.drawable.color_green, "chokokki", "green"));
+        colors.add(new Word(R.drawable.color_brown, "takaakki", "brown"));
+        colors.add(new Word(R.drawable.color_gray, "topoppi", "gray"));
+        colors.add(new Word(R.drawable.color_black, "kululli", "black"));
+        colors.add(new Word(R.drawable.color_white, "kelelli", "white"));
+        colors.add(new Word(R.drawable.color_dusty_yellow, "topiise", "dusty yellow"));
+        colors.add(new Word(R.drawable.color_mustard_yellow, "chiwiite", "mustard yellow"));
 
         WordAdapter colorsAdapter = new WordAdapter(this, colors);
 
         ListView colorView = (ListView) findViewById(R.id.list);
-
         colorView.setAdapter(colorsAdapter);
     }
-
 }
 
