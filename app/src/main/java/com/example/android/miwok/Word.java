@@ -15,6 +15,11 @@ public class Word {
     // Miwok translation of the word
     private String mMiwokTranslation;
 
+    private int mMiwokPronunciation;
+
+    // Miwok pronunciation variable
+    private static final int NO_SOUND_PROVIDED = -1;
+
     // Constant value to represent that no image was provided
     private static final int NO_IMAGE_PROVIDED = -1;
 
@@ -24,16 +29,18 @@ public class Word {
     }
 
     // Constructor with word related image
-    public Word(int wordImage, String defaultTranslation, String miwokTranslation){
+    public Word(int wordImage, String defaultTranslation, String miwokTranslation, int miwokPronunciation){
         mWordImage = wordImage;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mMiwokPronunciation = miwokPronunciation;
     }
 
     // Phrases activity constructor
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int miwokPronunciation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mMiwokPronunciation = miwokPronunciation;
     }
 
     public int getImageResourceId() {
@@ -48,5 +55,9 @@ public class Word {
     // Returns Miwok translation
     public String getMiwokTranslation() {
         return mMiwokTranslation;
+    }
+
+    public int getMiwokPronunciation() {
+        return mMiwokPronunciation;
     }
 }

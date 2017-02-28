@@ -23,6 +23,7 @@ import static com.example.android.miwok.R.id.word_list;
  */
 
 public class WordAdapter extends ArrayAdapter<Word> {
+
     /**
      * @param context Current context (Activity)
      * @param words   A list of words to be displayed in a list
@@ -39,7 +40,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
      */
     @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         // Get the data item for this position
         Word word = getItem(position);
 
@@ -74,8 +75,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         defaultWord.setText(word.getDefaultTranslation());
         miwokWord.setText(word.getMiwokTranslation());
+
         // Return the completed view to render on screen
         return convertView;
     }
-
 }
